@@ -1,6 +1,6 @@
 # Discord Controlled Vibrator
-Yes its exactly what it says.
-
+Yes its exactly what it says.\
+If you want someone to control your DIY vibrator but they're hundreds of kilometers(miles) away from you. This program is perfect for you
 ## Description
 
 You use a Raspberry Pi to control a motor using PWM. Means of driving the motor is up to your circuits. I personally used a L293D to drive a MOSFET to prevent burning (its very stupid but this project is stupid enough)..\
