@@ -9,13 +9,13 @@ The bot only provides a PWM signal and enable signal out the GPIO pins (GPIO18 (
 - GPIO18 (Pin12) is used for the PWM signal
 - GPIO21 (Pin40) is used for an enable signal
 ## Installation (why?)
-- Clone this repository.\
+- Clone this repository.
 - Then install the required dependancies
 ```
 pip install -r requirements.txt
 ```
-- (This really depends on your installation of python)\
-- Open the `main.py` file to add your bot token and perfer parameters\
-- Finally, profit. Don't make a mess uwu\
+- (This really depends on your installation of python)
+- Open the `main.py` file to add your bot token and perfer parameters
+- Finally, profit. Don't make a mess UwU~
   
 This was tested using Python 3.10.10
