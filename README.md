@@ -8,6 +8,17 @@ The vibrator used is a DIY rotor however if you have access to the motor termina
 The bot only provides a PWM signal and enable signal out the GPIO pins (GPIO12 (Pin32) and GPIO21 (Pin40) were used)
 - GPIO12 (Pin32) is used for the PWM signal
 - GPIO21 (Pin40) is used for an enable signal
+
+### Commands used:
+- `-=letsplay` (Allows ANY user to start controlling ur vibrator)
+- `-=tease` (Only allows YOU to start)
+- `-=onigiri` (**SAFE WORD** Use this to stop the vibrator and delete the remote)
+## Images
+![image](https://github.com/user-attachments/assets/20f55327-1d8e-4754-89e8-6e69e75d823d)
+![image](https://github.com/user-attachments/assets/f91bda79-507e-4947-9654-c342899ac40a)
+![image](https://github.com/user-attachments/assets/18c8eabf-9039-4315-8cbd-818627f24c62)
+
+
 ## Installation (why?)
 - Clone this repository.
 - Then install the required dependancies
