@@ -140,11 +140,9 @@ def update_embed3(): #this one updates embeds everytime a button is pressed FOR 
         return embed
 
 class Select(discord.ui.Select): #the select option is the menu that allows the user to choose what type they want
-    global selecVal, ntuo
+    global selecVal, ntuo, speedo, freq, onT, offT
     typeVal = ['Constant', "Pulse", "Wave"]
     def __init__(self):
-        
-        
         options=[
             discord.SelectOption(label="Constant",emoji='📶',description="Constant Levels", default=(selcVal==1)),
             discord.SelectOption(label="Pulse",emoji='💓',description="Interminted Pulses (Square Wave)", default=(selcVal==2)),
@@ -154,19 +152,26 @@ class Select(discord.ui.Select): #the select option is the menu that allows the 
 
 
     async def callback(self, interaction: discord.Interaction):
-        global selcVal
+        global selcVal, ntuo, speedo, freq, onT, offT
         match self.values[0]:
             case 'Constant':
                 #print("const")
                 selcVal = 1
+                if ntuo: #checks to see if the vibrator is already on if so update to its function
+                    motor.on()
+                    motor.value = float(speedo)/10
                 await interaction.response.edit_message(embed=update_embed(),view=ConstButtonz())
             case 'Pulse':
                 #print("pulse")
                 selcVal = 2
+                if ntuo:
+                    motor.blink(onT,offT,0,0,None,True)
                 await interaction.response.edit_message(embed=update_embed2(), view=PulseButtonz())
             case 'Wave':
                 #print("wave")
                 selcVal = 3
+                if ntuo:
+                    motor.pulse(1/(2*freq),1/(2*freq), None, True)
                 await interaction.response.edit_message(embed=update_embed3(), view=WaveButtonz())
 
 
