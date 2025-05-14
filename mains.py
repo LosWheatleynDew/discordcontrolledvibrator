@@ -178,7 +178,7 @@ class Select(discord.ui.Select): #the select option is the menu that allows the 
 class PulseButtonz(discord.ui.View): #for pulses
     global selcVal, ntuo, freq, onT, offT
 
-    def __init__(self, *, timeout=180):
+    def __init__(self, *, timeout=None):
 
         super().__init__(timeout=timeout)
         self.add_item(Select())  
@@ -234,7 +234,7 @@ class PulseButtonz(discord.ui.View): #for pulses
 class WaveButtonz(discord.ui.View): #sine waves
     global selcVal, ntuo, freq
 
-    def __init__(self, *, timeout=180):
+    def __init__(self, *, timeout=None):
 
         super().__init__(timeout=timeout)
         self.add_item(Select())  
@@ -279,7 +279,7 @@ class ConstButtonz(discord.ui.View):
     
     
    
-    def __init__(self, *, timeout=180):
+    def __init__(self, *, timeout=None):
 
         super().__init__(timeout=timeout)
         self.add_item(Select())
